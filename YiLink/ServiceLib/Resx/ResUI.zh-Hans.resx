@@ -808,7 +808,7 @@
     <value>过滤器 (支持正则)</value>
   </data>
   <data name="menuWebsiteItem" xml:space="preserve">
-    <value>{0} 官网</value>
+    <value>{0} 主页</value>
   </data>
   <data name="menuRoutingAdvancedAdd" xml:space="preserve">
     <value>添加规则集</value>
