@@ -7,8 +7,8 @@ chmod a+x pkg2appimage
 export AppImageOutputArch=$OutputArch
 export OutputPath=$OutputPath64
 ./pkg2appimage ./pkg2appimage.yml
-mv out/*.AppImage v2rayN-${AppImageOutputArch}.AppImage
+mv out/*.AppImage YiLink-${AppImageOutputArch}.AppImage
 export AppImageOutputArch=$OutputArchArm
 export OutputPath=$OutputPathArm64
 ./pkg2appimage ./pkg2appimage.yml
-mv out/*.AppImage v2rayN-${AppImageOutputArch}.AppImage
+mv out/*.AppImage YiLink-${AppImageOutputArch}.AppImage

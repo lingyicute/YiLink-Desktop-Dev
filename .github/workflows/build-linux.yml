@@ -13,8 +13,8 @@ on:
 env:
   OutputArch: "linux-64"
   OutputArchArm: "linux-arm64"
-  OutputPath64:  "${{ github.workspace }}/v2rayN/Release/linux-64"
-  OutputPathArm64:  "${{ github.workspace }}/v2rayN/Release/linux-arm64"
+  OutputPath64:  "${{ github.workspace }}/YiLink/Release/linux-64"
+  OutputPathArm64:  "${{ github.workspace }}/YiLink/Release/linux-arm64"
 
 jobs:
   build:
@@ -38,18 +38,18 @@ jobs:
 
     - name: Build
       run: |
-        cd v2rayN 
-        dotnet publish ./v2rayN.Desktop/v2rayN.Desktop.csproj -c Release -r linux-x64   --self-contained=true -o $OutputPath64
-        dotnet publish ./v2rayN.Desktop/v2rayN.Desktop.csproj -c Release -r linux-arm64 --self-contained=true -o $OutputPathArm64
+        cd YiLink 
+        dotnet publish ./YiLink.Desktop/YiLink.Desktop.csproj -c Release -r linux-x64   --self-contained=true -o $OutputPath64
+        dotnet publish ./YiLink.Desktop/YiLink.Desktop.csproj -c Release -r linux-arm64 --self-contained=true -o $OutputPathArm64
         dotnet publish ./AmazTool/AmazTool.csproj             -c Release -r linux-x64   --self-contained=true -p:PublishTrimmed=true -o $OutputPath64
         dotnet publish ./AmazTool/AmazTool.csproj             -c Release -r linux-arm64 --self-contained=true -p:PublishTrimmed=true -o $OutputPathArm64
 
     - name: Upload build artifacts
       uses: actions/upload-artifact@v4.6.2
       with:
-        name: v2rayN-linux
+        name: YiLink-linux
         path: |
-          ${{ github.workspace }}/v2rayN/Release/linux*
+          ${{ github.workspace }}/YiLink/Release/linux*
 
     # release debian package
     - name: Package debian
@@ -63,7 +63,7 @@ jobs:
       uses: svenstaro/upload-release-action@v2
       if: github.event.inputs.release_tag != ''
       with:
-        file: ${{ github.workspace }}/v2rayN*.deb
+        file: ${{ github.workspace }}/YiLink*.deb
         tag: ${{ github.event.inputs.release_tag }}
         file_glob: true
         prerelease: true
@@ -78,7 +78,7 @@ jobs:
       uses: svenstaro/upload-release-action@v2
       if: github.event.inputs.release_tag != ''
       with:
-        file: ${{ github.workspace }}/v2rayN*.AppImage
+        file: ${{ github.workspace }}/YiLink*.AppImage
         tag: ${{ github.event.inputs.release_tag }}
         file_glob: true
         prerelease: true
@@ -95,7 +95,7 @@ jobs:
       uses: svenstaro/upload-release-action@v2
       if: github.event.inputs.release_tag != ''
       with:
-        file: ${{ github.workspace }}/v2rayN*.zip
+        file: ${{ github.workspace }}/YiLink*.zip
         tag: ${{ github.event.inputs.release_tag }}
         file_glob: true
         prerelease: true

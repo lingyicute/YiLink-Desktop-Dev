@@ -3,10 +3,10 @@
 Arch="$1"
 OutputPath="$2"
 
-OutputArch="v2rayN-${Arch}"
-FileName="v2rayN-${Arch}.zip"
+OutputArch="YiLink-${Arch}"
+FileName="YiLink-${Arch}.zip"
 
-wget -nv -O $FileName "https://github.com/2dust/v2rayN-core-bin/raw/refs/heads/master/$FileName"
+wget -nv -O $FileName "https://github.com/lingyicute/YiLink-Desktop-core-bin/raw/refs/heads/master/$FileName"
 
 ZipPath64="./$OutputArch"
 mkdir $ZipPath64
