@@ -94,7 +94,13 @@
                         </MenuItem.Header>
                     </MenuItem>
 
-                    <MenuItem x:Name="menuCheckUpdate" Header="{x:Static resx:ResUI.menuCheckUpdate}" />
+                    <MenuItem x:Name="menuCheckUpdate" Padding="8,0">
+                        <MenuItem.Header>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{x:Static resx:ResUI.menuCheckUpdate}" />
+                            </StackPanel>
+                        </MenuItem.Header>
+                    </MenuItem>
 
                     <MenuItem x:Name="menuHelp" Padding="8,0">
                         <MenuItem.Header>
