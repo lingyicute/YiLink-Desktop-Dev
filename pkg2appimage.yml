@@ -1,37 +1,37 @@
-app: v2rayN
+app: YiLink
 binpatch: true
 
 ingredients:
   script:
-    - export FileName="v2rayN-${AppImageOutputArch}.zip"
-    - wget -nv -O $FileName "https://github.com/2dust/v2rayN-core-bin/raw/refs/heads/master/${FileName}"
+    - export FileName="YiLink-${AppImageOutputArch}.zip"
+    - wget -nv -O $FileName "https://github.com/lingyicute/YiLink-Desktop-core-bin/raw/refs/heads/master/${FileName}"
     - 7z x $FileName -aoa
-    - cp -rf v2rayN-${AppImageOutputArch}/* $OutputPath
+    - cp -rf YiLink-${AppImageOutputArch}/* $OutputPath
 
 script:
   - mkdir -p usr/bin usr/lib
-  - cp -rf $OutputPath usr/lib/v2rayN
-  - echo "When this file exists, app will not store configs under this folder" > usr/lib/v2rayN/NotStoreConfigHere.txt
-  - ln -sf usr/lib/v2rayN/v2rayN usr/bin/v2rayN
-  - chmod a+x usr/lib/v2rayN/v2rayN
+  - cp -rf $OutputPath usr/lib/YiLink
+  - echo "When this file exists, app will not store configs under this folder" > usr/lib/YiLink/NotStoreConfigHere.txt
+  - ln -sf usr/lib/YiLink/YiLink usr/bin/YiLink
+  - chmod a+x usr/lib/YiLink/YiLink
   - find usr -type f -exec sh -c 'file "{}" | grep -qi "executable" && chmod +x "{}"' \;
-  - install -Dm644 usr/lib/v2rayN/v2rayN.png v2rayN.png
-  - install -Dm644 usr/lib/v2rayN/v2rayN.png usr/share/pixmaps/v2rayN.png
-  - cat > v2rayN.desktop <<EOF
+  - install -Dm644 usr/lib/YiLink/YiLink.png YiLink.png
+  - install -Dm644 usr/lib/YiLink/YiLink.png usr/share/pixmaps/YiLink.png
+  - cat > YiLink.desktop <<EOF
   - [Desktop Entry]
-  - Name=v2rayN
+  - Name=YiLink
   - Comment=A GUI client for Windows and Linux, support Xray core and sing-box-core and others
-  - Exec=v2rayN
-  - Icon=v2rayN
+  - Exec=YiLink
+  - Icon=YiLink
   - Terminal=false
   - Type=Application
   - Categories=Network;
   - EOF
-  - install -Dm644 v2rayN.desktop usr/share/applications/v2rayN.desktop
+  - install -Dm644 YiLink.desktop usr/share/applications/YiLink.desktop
   - cat > AppRun <<\EOF
   - #!/bin/sh
   - HERE="$(dirname "$(readlink -f "${0}")")"
-  - cd ${HERE}/usr/lib/v2rayN
-  - exec ${HERE}/usr/lib/v2rayN/v2rayN $@
+  - cd ${HERE}/usr/lib/YiLink
+  - exec ${HERE}/usr/lib/YiLink/YiLink $@
   - EOF
   - chmod a+x AppRun

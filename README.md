@@ -1,17 +1,16 @@
-# v2rayN
+# YiLink
 
 A GUI client for Windows, Linux and macOS, support [Xray](https://github.com/XTLS/Xray-core)
 and [sing-box](https://github.com/SagerNet/sing-box)
-and [others](https://github.com/2dust/v2rayN/wiki/List-of-supported-cores)
+and [others](https://github.com/lingyicute/YiLink-Desktop/wiki/List-of-supported-cores)
 
-[![GitHub commit activity](https://img.shields.io/github/commit-activity/m/2dust/v2rayN)](https://github.com/2dust/v2rayN/commits/master)
-[![CodeFactor](https://www.codefactor.io/repository/github/2dust/v2rayn/badge)](https://www.codefactor.io/repository/github/2dust/v2rayn)
-[![GitHub Releases](https://img.shields.io/github/downloads/2dust/v2rayN/latest/total?logo=github)](https://github.com/2dust/v2rayN/releases)
-[![Chat on Telegram](https://img.shields.io/badge/Chat%20on-Telegram-brightgreen.svg)](https://t.me/v2rayn)
+[![GitHub commit activity](https://img.shields.io/github/commit-activity/m/lingyicute/YiLink-Desktop)](https://github.com/lingyicute/YiLink-Desktop/commits/master)
+[![CodeFactor](https://www.codefactor.io/repository/github/lingyicute/yilink-desktop/badge)](https://www.codefactor.io/repository/github/lingyicute/yilink-desktop)
+[![GitHub Releases](https://img.shields.io/github/downloads/lingyicute/YiLink-Desktop/latest/total?logo=github)](https://github.com/lingyicute/YiLink-Desktop/releases)
 
 ## How to use
 
-Read the [Wiki](https://github.com/2dust/v2rayN/wiki) for details.
+Read the [Wiki](https://github.com/lingyicute/YiLink-Desktop/wiki) for details.
 
 ## Telegram Channel
 
